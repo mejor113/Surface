@@ -78,51 +78,64 @@ body{
     text-transform: uppercase;
   }
 
+  .button-center{
+    display: block;
+    width: 450px;
 
-  .apple, .apple:hover, .apple:active, .apple:focus{
-      background: url("../image/Icon_Apple.png") no-repeat 20px 8px;
-      background-color:@purple;
-      color: white;
+    .btn{
+      display: inline-block;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: @purple;
+      letter-spacing: 0;
+      padding: 12px 40px;
+      outline: none !important;
+      border: none;
+
+      &:focus{
+        color: white;
+      }
+
+      &:hover{
+        box-shadow: 0 3px 8px black;
+      }
+
+      &:active{
+        box-shadow: inset 0 2px 3px black;
+        color: rgba(255, 255, 255, 0.75);
+        border: none;
+      }
+
+      &:first-of-type{
+        margin-right: 30px;
+      }
+
+      .apple, .apple:hover, .apple:active, .apple:focus{
+          background: url("../image/Icon_Apple.png") no-repeat left center;
+          background-color: @purple;
+          color: white;
+          height: 30px;
+          padding-left: 30px;
+          padding-top: 5px;
+      }
+
+      .google-play, .google-play:hover, .google-play:active, .google-play:focus{
+          background: url("../image/Icon_Google-Play.png") no-repeat left center;
+          background-color: @purple;
+          color: white;
+          height: 30px;
+          padding-left: 30px;
+          padding-top: 5px;
+      }
+    }
   }
 
-  .google-play, .google-play:hover, .google-play:active, .google-play:focus{
-      background: url("../image/Icon_Google-Play.png") no-repeat 22px 10px;
-      background-color:@purple;
-      color: white;
-  }
 
-  .btn{
-    width: 100%;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: @purple;
-    letter-spacing: 0;
-    padding: 12px;
-    outline: none !important;
-    border:none;
 
-    p{
-      margin: 0;
-      margin-left: 45px;
-    }
 
-    &:focus{
-      color: white;
-    }
 
-    &:hover{
-      box-shadow: 0 3px 8px black;
-    }
-
-    &:active{
-      box-shadow: inset 0 2px 3px black;
-      color:rgba(255, 255, 255, 0.75);
-      border:none;
-    }
-
-  }
 
 
   .main-header{
@@ -469,7 +482,7 @@ body{
 
 }
 
-@media (min-width: 750px) and (max-width: 991px){
+@media (max-width: 991px){
 
   body{
     .main-header{
