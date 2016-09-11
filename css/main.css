@@ -7240,3 +7240,37 @@ body .main-footer .footer-info .right-footer-text {
     padding: 15px 0;
   }
 }
+@media (max-width: 749px) {
+  body h2 {
+    font-size: 50px;
+  }
+  body .button-center {
+    width: 320px;
+  }
+  body .button-center .btn {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+  body .button-center .btn .apple,
+  body .button-center .btn .apple:hover,
+  body .button-center .btn .apple:active,
+  body .button-center .btn .apple:focus,
+  body .button-center .btn .google-play,
+  body .button-center .btn .google-play:hover,
+  body .button-center .btn .google-play:active,
+  body .button-center .btn .google-play:focus {
+    padding-top: 7px;
+  }
+  body .button-center .btn:first-of-type {
+    margin-right: 10px;
+  }
+  body .main-header .navbar {
+    padding-top: 30px;
+  }
+  body .main-header .navbar .navbar-collapse {
+    top: 0;
+  }
+  body .main-header .header-content h2 {
+    font-size: 40px;
+  }
+}
