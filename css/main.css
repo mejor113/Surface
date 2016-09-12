@@ -6869,6 +6869,14 @@ body main .main-inline-item {
   padding-top: 40px;
   position: relative;
 }
+body main .main-inline-item .xs-athlets-sliders #slide1,
+body main .main-inline-item .xs-athlets-sliders #slide2,
+body main .main-inline-item .xs-athlets-sliders #slide3,
+body main .main-inline-item .xs-athlets-sliders #slide4,
+body main .main-inline-item .xs-athlets-sliders #slide5,
+body main .main-inline-item .xs-athlets-sliders #slide6 {
+  display: none;
+}
 body main .main-inline-item .footballer {
   position: absolute;
   display: block;
