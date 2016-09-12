@@ -628,7 +628,7 @@ body{
           margin-top: 20px;
 
           &:after{
-            top: 70px;
+            bottom: -30px;
             left: 0;
           }
 
@@ -725,7 +725,209 @@ body{
     }
 
     main{
+      .main-inline-item{
+        padding-top: 0;
 
+        .inline-item-title-row{
+          padding-bottom: 280px;
+        }
+
+        h3 > .counter-line-white {
+          border-bottom-color: @purple;
+        }
+
+        h3 > .purple-text {
+          color: black;
+        }
+
+
+
+        .footballer{
+          height: 300px;
+          width: 182px;
+          background-size: cover;
+          left: 50%;
+          margin-left: -91px;
+          top: 100px;
+          z-index: 1000;
+        }
+
+        .basket-player{
+          height: 283px;
+          width: 320px;
+          background-size: 100%;
+          left: 50%;
+          margin-left: -160px;
+          top: 100px;
+        }
+
+        .xs-athlets-sliders{
+          margin-left: -15px;
+          margin-right: -15px;
+          position: relative;
+          height:265px;
+          background-color: @light-grey;
+          overflow: hidden;
+
+          input{
+            display: none;
+          }
+
+         .controls {
+          left: 50%;
+          width: 78px;
+          margin: 0;
+          margin-left: -39px;
+          z-index: 500;
+          position: absolute;
+          bottom: 20px;
+
+            label {
+            cursor: pointer;
+            position: relative;
+            background-color: @dark-grey;
+            display: inline-block;
+            vertical-align: middle;
+            height: 15px;
+            width: 15px;
+            margin: 0;
+            margin-right: 10px;
+            border-radius: 50%;
+            transition:background ease-in-out .5s;
+
+              &:hover{
+                background-color: lighten(@purple, 40%);;
+              }
+
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+          }
+
+          .slides{
+            position: absolute;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+            background-color: @light-grey;
+            color: black;
+            top: auto;
+            margin-left: 0;
+            margin-right: 0;
+
+          }
+
+          #slide1:checked ~ .slider > .slide1,
+          #slide2:checked ~ .slider > .slide2,
+          #slide3:checked ~ .slider > .slide3
+          {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+          }
+
+          #slide1:checked ~ .controls > label:nth-child(1),
+          #slide2:checked ~ .controls > label:nth-child(2),
+          #slide3:checked ~ .controls > label:nth-child(3)
+          {
+            background-color: @purple;
+
+          }
+        }
+
+        .xs-players-sliders{
+          margin-left: -15px;
+          margin-right: -15px;
+          position: relative;
+          height: 265px;
+          background-color: @light-grey;
+
+
+          input{
+            display: none;
+          }
+
+         .controls {
+          left: 50%;
+          width: 78px;
+          margin: 0;
+          margin-left: -39px;
+          z-index: 500;
+          position: absolute;
+          bottom: 20px;
+
+            label {
+            cursor: pointer;
+            position: relative;
+            background-color: @dark-grey;
+            display: inline-block;
+            vertical-align: middle;
+            height: 15px;
+            width: 15px;
+            margin:0;
+            margin-right: 10px;
+            border-radius: 50%;
+            transition: background ease-in-out .5s;
+
+              &:hover{
+                background-color: lighten(@purple, 40%);;
+              }
+
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+          }
+
+          .slides{
+            position: absolute;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+            background-color: @light-grey;
+            color: black;
+            top: auto;
+            margin-left: 0;
+            margin-right: 0;
+
+          }
+
+
+          #slide4:checked ~ .slider > .slide4,
+          #slide5:checked ~ .slider > .slide5,
+          #slide6:checked ~ .slider > .slide6 {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+          }
+
+
+          #slide4:checked ~ .controls > label:nth-child(1),
+          #slide5:checked ~ .controls > label:nth-child(2),
+          #slide6:checked ~ .controls > label:nth-child(3)
+          {
+            background-color: @purple;
+
+          }
+        }
+
+      }
+    }
+
+    .main-footer{
+
+      h2{
+       font-size: 50px;
+       padding-left: 0;
+       text-align: center;
+      }
+
+      h3{
+        font-size: 16px;
+        padding-left: 0px;
+        text-align: center;
+      }
     }
   }
 }
