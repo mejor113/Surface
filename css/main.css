@@ -6872,9 +6872,13 @@ body main .main-inline-item {
 body main .main-inline-item .xs-athlets-sliders #slide1,
 body main .main-inline-item .xs-athlets-sliders #slide2,
 body main .main-inline-item .xs-athlets-sliders #slide3,
-body main .main-inline-item .xs-athlets-sliders #slide4,
-body main .main-inline-item .xs-athlets-sliders #slide5,
-body main .main-inline-item .xs-athlets-sliders #slide6 {
+body main .main-inline-item .xs-athlets-sliders .controls {
+  display: none;
+}
+body main .main-inline-item .xs-players-sliders #slide4,
+body main .main-inline-item .xs-players-sliders #slide5,
+body main .main-inline-item .xs-players-sliders #slide6,
+body main .main-inline-item .xs-players-sliders .controls {
   display: none;
 }
 body main .main-inline-item .footballer {
@@ -7322,6 +7326,7 @@ body .main-footer .footer-info .right-footer-text {
     display: none;
   }
   body main .main-inline-item .xs-athlets-sliders .controls {
+    display: block;
     left: 50%;
     width: 78px;
     margin: 0;
@@ -7383,6 +7388,7 @@ body .main-footer .footer-info .right-footer-text {
     display: none;
   }
   body main .main-inline-item .xs-players-sliders .controls {
+    display: block;
     left: 50%;
     width: 78px;
     margin: 0;

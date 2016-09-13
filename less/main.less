@@ -201,9 +201,15 @@ body{
     .main-inline-item{
 
       .xs-athlets-sliders {
-              #slide1, #slide2, #slide3, #slide4 ,#slide5 ,#slide6{
+              #slide1, #slide2, #slide3, .controls{
              display: none;
            }
+        }
+
+        .xs-players-sliders {
+          #slide4 ,#slide5 ,#slide6, .controls{
+            display: none;
+          }
         }
 
       padding-top: 40px;
@@ -782,6 +788,7 @@ body{
           }
 
          .controls {
+           display: block;
           left: 50%;
           width: 78px;
           margin: 0;
@@ -857,6 +864,7 @@ body{
           }
 
          .controls {
+           display:block;
           left: 50%;
           width: 78px;
           margin: 0;
