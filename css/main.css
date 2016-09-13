@@ -6869,18 +6869,6 @@ body main .main-inline-item {
   padding-top: 40px;
   position: relative;
 }
-body main .main-inline-item .xs-athlets-sliders #slide1,
-body main .main-inline-item .xs-athlets-sliders #slide2,
-body main .main-inline-item .xs-athlets-sliders #slide3,
-body main .main-inline-item .xs-athlets-sliders .controls {
-  display: none;
-}
-body main .main-inline-item .xs-players-sliders #slide4,
-body main .main-inline-item .xs-players-sliders #slide5,
-body main .main-inline-item .xs-players-sliders #slide6,
-body main .main-inline-item .xs-players-sliders .controls {
-  display: none;
-}
 body main .main-inline-item .footballer {
   position: absolute;
   display: block;
@@ -6946,6 +6934,18 @@ body main .main-inline-item .purple-bck-clr {
 body main .main-inline-item .dark-blue-bck-clr {
   background-color: #0a0d35;
   color: white;
+}
+body main .main-inline-item .xs-athlets-sliders #slide1,
+body main .main-inline-item .xs-athlets-sliders #slide2,
+body main .main-inline-item .xs-athlets-sliders #slide3,
+body main .main-inline-item .xs-athlets-sliders .controls {
+  display: none;
+}
+body main .main-inline-item .xs-players-sliders #slide4,
+body main .main-inline-item .xs-players-sliders #slide5,
+body main .main-inline-item .xs-players-sliders #slide6,
+body main .main-inline-item .xs-players-sliders .controls {
+  display: none;
 }
 body main .main-blocks-item {
   padding-top: 200px;
