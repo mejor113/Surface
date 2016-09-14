@@ -6745,6 +6745,20 @@ button.close {
   font-weight: 100;
   font-style: normal;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 body {
   font-family: 'ProximaNova', sans-serif;
   font-size: 16px;
@@ -6784,17 +6798,27 @@ body .button-center .btn {
   padding: 12px 40px;
   outline: none !important;
   border: none;
+  transition: box-shadow ease-in-out 0.3s;
 }
-body .button-center .btn:focus {
+body .button-center .btn:focus .apple,
+body .button-center .btn:focus .google-play {
   color: white;
 }
 body .button-center .btn:hover {
   box-shadow: 0 3px 8px black;
 }
+body .button-center .btn:hover .apple,
+body .button-center .btn:hover .google-play {
+  color: white;
+}
 body .button-center .btn:active {
   box-shadow: inset 0 2px 3px black;
   color: rgba(255, 255, 255, 0.75);
   border: none;
+}
+body .button-center .btn:active .apple,
+body .button-center .btn:active .google-play {
+  opacity: 0.75;
 }
 body .button-center .btn:first-of-type {
   margin-right: 30px;
@@ -6804,22 +6828,20 @@ body .button-center .btn .apple:hover,
 body .button-center .btn .apple:active,
 body .button-center .btn .apple:focus {
   background: url("../image/Icon_Apple.png") no-repeat left center;
-  background-color: #5e3db3;
-  color: white;
   height: 30px;
   padding-left: 30px;
   padding-top: 5px;
+  transition: opacity ease-in-out 0.2s;
 }
 body .button-center .btn .google-play,
 body .button-center .btn .google-play:hover,
 body .button-center .btn .google-play:active,
 body .button-center .btn .google-play:focus {
   background: url("../image/Icon_Google-Play.png") no-repeat left center;
-  background-color: #5e3db3;
-  color: white;
   height: 30px;
   padding-left: 30px;
   padding-top: 5px;
+  transition: opacity ease-in-out 0.2s;
 }
 body .main-header {
   background: url("../image/header-background.jpg") no-repeat center top;
@@ -6848,6 +6870,7 @@ body .main-header .navbar .navbar-nav a {
   color: white;
   padding: 10px;
   padding-top: 20px;
+  transition: color ease-in-out 0.3s, opacity ease-in-out 0.2s;
 }
 body .main-header .navbar .navbar-nav a:hover {
   color: #5e3db3;
@@ -7087,9 +7110,17 @@ body .main-footer .footer-info .footer-links .social-links-block .social-btn {
   border-radius: 25px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color ease-in 0.3s, opacity ease-in 0.3s;
+}
+body .main-footer .footer-info .footer-links .social-links-block .social-btn:active {
+  opacity: 0.7;
+  background-size: 30%;
 }
 body .main-footer .footer-info .footer-links .social-links-block .fb-link {
   background-image: url("../image/facebook.svg");
+}
+body .main-footer .footer-info .footer-links .social-links-block .fb-link:active {
+  background-size: 20%;
 }
 body .main-footer .footer-info .footer-links .social-links-block .tw-link {
   background-image: url("../image/twitter.svg");
@@ -7100,9 +7131,9 @@ body .main-footer .footer-info .footer-links .social-links-block .ytb-link {
 }
 body .main-footer .footer-info .footer-links .social-links-block .social-btn:hover {
   background-color: #c1c1c1;
-}
-body .main-footer .footer-info .footer-links .social-links-block .social-btn:active {
-  opacity: 0.3;
+  animation-name: rotate;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 body .main-footer .footer-info .right-footer-text {
   padding-top: 15px;
@@ -7123,6 +7154,7 @@ body .main-footer .footer-info .right-footer-text {
     border-radius: 0px;
     background-color: white;
     border-radius: 2px;
+    transition: background-color ease-in-out 0.3s, opacity ease-in-out 0.3s;
   }
   body .main-header .navbar-default .navbar-toggle:focus {
     background-color: transparent;
@@ -7165,6 +7197,7 @@ body .main-footer .footer-info .right-footer-text {
   }
   body .main-header .navbar-default .navbar-collapse .navbar-nav a p {
     margin: 0;
+    transition: opacity ease-in-out 0.2s;
   }
   body .main-header .navbar-default .navbar-collapse .navbar-nav a:focus {
     background-color: #5e3db3;
