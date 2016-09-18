@@ -6885,8 +6885,12 @@ body .main-header .header-content {
   text-transform: uppercase;
 }
 body .main-header .header-content .header-button-block {
+  padding: 0;
   margin-top: 200px;
   margin-bottom: 75px;
+}
+body .main-header .header-content .header-button-block .col-xs-12 {
+  padding: 0;
 }
 body main .main-inline-item {
   padding-top: 40px;
