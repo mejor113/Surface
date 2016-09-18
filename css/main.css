@@ -7082,6 +7082,7 @@ body .main-footer h3 {
   font-weight: 900;
 }
 body .main-footer .footer-button-block {
+  padding: 0;
   margin-bottom: 100px;
 }
 body .main-footer .footer-info {
