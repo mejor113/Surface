@@ -6889,8 +6889,13 @@ body .main-header .header-content .header-button-block {
   margin-top: 200px;
   margin-bottom: 75px;
 }
-body .main-header .header-content .header-button-block .col-xs-12 {
+body .main-header .header-content .header-button-block .row {
   padding: 0;
+  margin: 0;
+}
+body .main-header .header-content .header-button-block .row .col-xs-12 {
+  padding: 0;
+  margin: 0;
 }
 body main .main-inline-item {
   padding-top: 40px;
@@ -7476,6 +7481,9 @@ body .main-footer .footer-info .right-footer-text {
   body main .main-inline-item .xs-players-sliders #slide5:checked ~ .controls > label:nth-child(2),
   body main .main-inline-item .xs-players-sliders #slide6:checked ~ .controls > label:nth-child(3) {
     background-color: #5e3db3;
+  }
+  body .main-footer .none-xs-padding {
+    padding: 0;
   }
   body .main-footer h2 {
     font-size: 50px;
