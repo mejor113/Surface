@@ -6783,6 +6783,10 @@ body h3 {
   padding: 0;
   text-transform: uppercase;
 }
+body .yandex-metrika-hidden {
+  position: relative;
+  left: -1000px;
+}
 body .button-center {
   display: block;
   width: 450px;
