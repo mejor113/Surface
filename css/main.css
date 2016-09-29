@@ -6785,7 +6785,7 @@ body h3 {
 }
 body .yandex-metrika-hidden {
   position: relative;
-  left: -1000px;
+  left: -10000px;
 }
 body .button-center {
   display: block;
