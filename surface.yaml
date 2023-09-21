@@ -1,0 +1,21 @@
+namespace: surface
+surface:
+  defines: runnable
+  metadata:
+    name: surface
+    description: An application for connecting athletes and coaches.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    surface:
+      build: .
+  services:
+    surface-80:
+      container: surface
+      port: 80
+      host-port: 80
+      publish: false
+      protocol: TCP
+  variables:
+    base-url:
+      env: BASE_URL
+      value: '!!!SETME!!!'
