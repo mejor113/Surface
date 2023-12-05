@@ -1,0 +1,28 @@
+namespace: Surface
+
+static-frontend:
+  defines: runnable
+  metadata:
+    name: static-frontend
+    description: A static frontend service for HTML mockups with CSS and JS.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    static-frontend:
+      image: env-3344.registry.local/static-frontend:master-68ca67f
+      build: .
+      dockerfile: Dockerfile.static-frontend
+  services:
+    http:
+      description: Default port for HTTP traffic
+      container: static-frontend
+      port: 80
+      host-port: 80
+      publish: true
+      protocol: tcp
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - Surface/static-frontend

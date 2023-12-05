@@ -1,0 +1,28 @@
+FROM node:10-alpine as builder
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy project files
+COPY . .
+
+# Build the project
+RUN npx gulp less
+
+# Use nginx to serve the static content
+FROM nginx:alpine
+
+# Copy static assets from builder stage
+COPY --from=builder /app /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
